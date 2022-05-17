@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <SplitPane prefHeight="33.0" prefWidth="919.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="settingsButton" layoutX="14.0" layoutY="3.0" mnemonicParsing="false" text="Réglages" />
+                  <Button fx:id="selectFileButton" layoutX="100.0" layoutY="2.0" mnemonicParsing="false" text="Sélectionner un fichier" />
+                  <Label fx:id="selectedFileLabel" layoutX="251.0" layoutY="7.0" text="Aucun Fichier sélectionné " />
+                  <Button fx:id="genererImg" layoutX="793.0" layoutY="1.0" mnemonicParsing="false" text="Générer image" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="2.0" />
+                  <Button fx:id="ecran" layoutX="649.0" layoutY="1.0" mnemonicParsing="false" onAction="#agrandir" prefHeight="25.0" prefWidth="119.0" text="Agrandir le graphe" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="2.0" />
+                  <Button layoutX="515.0" layoutY="3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Ajouter graphe" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="2.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="517.0" prefWidth="167.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="tx2" layoutX="98.0" layoutY="155.0" prefHeight="26.0" prefWidth="36.0" />
+            <Label layoutX="12.0" layoutY="233.0" text="Coordonnées y :" textFill="#f57c0b">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ty1" layoutX="98.0" layoutY="281.0" prefHeight="26.0" prefWidth="36.0" />
+            <Label layoutX="12.0" layoutY="406.0" text="Pas :" textFill="#ff7d04">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pas" layoutX="99.0" layoutY="402.0" prefHeight="26.0" prefWidth="36.0" />
+            <Label layoutX="12.0" layoutY="63.0" text="Coordonnées x :" textFill="#f28101">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="112.0" text="Début :" />
+            <TextField fx:id="tx1" layoutX="98.0" layoutY="108.0" prefHeight="26.0" prefWidth="36.0" />
+            <Label layoutX="12.0" layoutY="159.0" text="Fin :" />
+            <Label layoutX="12.0" layoutY="285.0" text="Début :" />
+            <Label layoutX="12.0" layoutY="332.0" text="Fin :" />
+            <TextField fx:id="ty2" layoutX="98.0" layoutY="328.0" prefHeight="26.0" prefWidth="36.0" />
+            <Button fx:id="rechercher" layoutX="78.0" layoutY="458.0" mnemonicParsing="false" text="Rechercher" />
+            <Label layoutX="12.0" layoutY="27.0" text="Graphique :" textFill="#f28101">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_graphe_selec" layoutX="98.0" layoutY="23.0" prefHeight="26.0" prefWidth="36.0" />
+            <Button fx:id="rt" layoutX="12.0" layoutY="458.0" mnemonicParsing="false" text="Retour" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="anch_graphe" prefHeight="517.0" prefWidth="742.0" />
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="34.0" prefWidth="919.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="tracer" alignment="CENTER" contentDisplay="CENTER" layoutX="460.0" layoutY="5.0" onAction="#tracer" text="Tracer" AnchorPane.bottomAnchor="4.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
